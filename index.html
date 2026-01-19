@@ -2,12 +2,19 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <title>Захар — персональный сайт</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Захар — персональный сайт</title>
 
-  <!-- Font Awesome -->
-  <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <!-- SEO базовые мета-теги -->
+  <meta name="description" content="Захар, 20 лет, студент БНТУ. Персональный сайт">
+  <meta name="author" content="Захар">
+
+  <!-- Font Awesome 6.5.1 с защитой -->
+  <link rel="stylesheet" 
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" 
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" 
+        crossorigin="anonymous" 
+        referrerpolicy="no-referrer" />
 
   <style>
     * {
@@ -17,22 +24,22 @@
     }
 
     body {
-      font-family: Arial, sans-serif;
-      background: #f5f6fa;
-      color: #333;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      background: #f8fafc;
+      color: #1e293b;
       line-height: 1.6;
     }
 
     .container {
       width: 90%;
       max-width: 1100px;
-      margin: auto;
+      margin: 0 auto;
     }
 
     /* HEADER */
     header {
-      background: linear-gradient(135deg, #4b6cb7, #182848);
-      color: #fff;
+      background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+      color: white;
       text-align: center;
       padding: 100px 0 80px;
     }
@@ -42,18 +49,19 @@
       height: 160px;
       border-radius: 50%;
       object-fit: cover;
-      border: 4px solid #fff;
-      margin-bottom: 20px;
+      border: 5px solid white;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+      margin-bottom: 24px;
     }
 
     header h1 {
-      font-size: 3.2rem;
-      margin-bottom: 10px;
+      font-size: 3.4rem;
+      margin-bottom: 12px;
     }
 
     header p {
-      font-size: 1.2rem;
-      opacity: 0.9;
+      font-size: 1.35rem;
+      opacity: 0.95;
     }
 
     /* SECTIONS */
@@ -63,52 +71,68 @@
 
     section h2 {
       text-align: center;
-      font-size: 2.4rem;
+      font-size: 2.6rem;
       margin-bottom: 50px;
+      color: #3b82f6;
     }
 
     /* ABOUT */
     .about-content {
       display: flex;
       align-items: center;
-      gap: 40px;
+      gap: 50px;
+      flex-wrap: wrap;
+      justify-content: center;
     }
 
     .about-text {
       flex: 1;
+      min-width: 320px;
+      font-size: 1.15rem;
     }
 
     .about-img {
       width: 320px;
       border-radius: 16px;
-      object-fit: cover;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.12);
     }
 
     /* SKILLS */
     .skills-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 30px;
+      gap: 28px;
     }
 
     .skill-card {
-      background: #fff;
-      padding: 30px;
+      background: white;
+      padding: 32px 24px;
       border-radius: 16px;
       text-align: center;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+      transition: all 0.25s ease;
+    }
+
+    .skill-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 16px 40px rgba(59,130,246,0.18);
     }
 
     .skill-icon {
-      font-size: 2.5rem;
-      color: #4b6cb7;
-      margin-bottom: 15px;
+      font-size: 2.8rem;
+      color: #3b82f6;
+      margin-bottom: 16px;
     }
 
     .skill-name {
-      font-size: 1.3rem;
-      font-weight: bold;
+      font-size: 1.35rem;
+      font-weight: 600;
       margin-bottom: 10px;
+    }
+
+    .skill-desc {
+      color: #64748b;
+      font-size: 1rem;
     }
 
     /* CONTACTS */
@@ -118,63 +142,67 @@
     }
 
     .contact-card {
-      background: #fff;
-      padding: 30px 40px;
+      background: white;
+      padding: 32px 48px;
       border-radius: 16px;
       text-align: center;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
     }
 
     .contact-link {
-      color: #4b6cb7;
+      color: #3b82f6;
+      font-size: 1.4rem;
+      font-weight: 600;
       text-decoration: none;
-      font-weight: bold;
+    }
+
+    .contact-link:hover {
+      text-decoration: underline;
     }
 
     /* SOCIAL */
     .social {
       text-align: center;
-      padding: 40px 0;
+      padding: 50px 0;
+      font-size: 1.4rem;
     }
 
     .social a {
-      margin: 0 15px;
+      margin: 0 20px;
+      color: #1e293b;
       text-decoration: none;
-      font-weight: bold;
-      color: #182848;
+      transition: color 0.3s;
+    }
+
+    .social a:hover {
+      color: #3b82f6;
     }
 
     /* FOOTER */
     footer {
-      background: #182848;
-      color: #fff;
+      background: #0f172a;
+      color: #cbd5e1;
       text-align: center;
-      padding: 30px 10px;
-      font-size: 0.9rem;
+      padding: 40px 20px;
+      font-size: 0.95rem;
     }
 
-    /* ADAPTIVE */
+    /* Адаптив */
     @media (max-width: 768px) {
-      header {
-        padding: 80px 0 60px;
-      }
+      header { padding: 80px 0 60px; }
+      header h1 { font-size: 2.8rem; }
+      .about-content { flex-direction: column; text-align: center; }
+      .about-img { width: 280px; }
+      section h2 { font-size: 2.2rem; }
+      .skill-card { padding: 28px 20px; }
+    }
 
-      header h1 {
-        font-size: 2.6rem;
-      }
-
-      .about-content {
-        flex-direction: column;
-        text-align: center;
-      }
-
-      .about-img {
-        width: 260px;
-      }
+    @media (max-width: 480px) {
+      .skill-name { font-size: 1.2rem; }
+      .skill-desc  { font-size: 0.95rem; }
     }
   </style>
 </head>
-
 <body>
 
 <header>
@@ -191,10 +219,8 @@
     <h2>Обо мне</h2>
     <div class="about-content">
       <div class="about-text">
-        <p>Привет! Меня зовут Захар, мне 20 лет. Я студент
-          <strong>Белорусского национального технического университета (БНТУ)</strong>.</p>
-        <p>Интересуюсь технологиями, спортом, музыкой и саморазвитием.</p>
-        <p>Этот сайт — мой первый персональный проект 🚀</p>
+        <p>Привет! Меня зовут Захар, мне 20 лет. Я студент <strong>Белорусского национального технического университета (БНТУ)</strong>.</p>
+        <p>Интересуюсь технологиями, спортом, музыкой и саморазвитием. Этот сайт — мой первый серьёзный проект 🚀</p>
       </div>
       <img src="https://images.unsplash.com/photo-1552058544-f2b08422138a?w=800&auto=format&fit=crop"
            alt="Фото Захара" class="about-img">
@@ -206,3 +232,67 @@
   <div class="container">
     <h2>Навыки</h2>
     <div class="skills-grid">
+
+      <div class="skill-card">
+        <i class="fas fa-comments skill-icon"></i>
+        <div class="skill-name">Коммуникация</div>
+        <div class="skill-desc">Умею ясно доносить мысли и слушать</div>
+      </div>
+
+      <div class="skill-card">
+        <i class="fas fa-users skill-icon"></i>
+        <div class="skill-name">Лидерство</div>
+        <div class="skill-desc">Беру ответственность и мотивирую</div>
+      </div>
+
+      <div class="skill-card">
+        <i class="fas fa-sync-alt skill-icon"></i>
+        <div class="skill-name">Адаптивность</div>
+        <div class="skill-desc">Быстро осваиваю новое и тренды</div>
+      </div>
+
+      <div class="skill-card">
+        <i class="fas fa-lightbulb skill-icon"></i>
+        <div class="skill-name">Креативность</div>
+        <div class="skill-desc">Нахожу нестандартные решения</div>
+      </div>
+
+      <div class="skill-card">
+        <i class="fas fa-microphone skill-icon"></i>
+        <div class="skill-name">Ораторское искусство</div>
+        <div class="skill-desc">Уверенно выступаю перед людьми</div>
+      </div>
+
+      <div class="skill-card">
+        <i class="fas fa-theater-masks skill-icon"></i>
+        <div class="skill-name">Актерские навыки</div>
+        <div class="skill-desc">Умею передавать эмоции</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="contacts">
+  <div class="container">
+    <h2>Контакты</h2>
+    <div class="contacts-grid">
+      <div class="contact-card">
+        <i class="fas fa-phone skill-icon" style="font-size:3rem; color:#3b82f6; margin-bottom:16px;"></i>
+        <div><a class="contact-link" href="tel:+375297462913">+375 29 746 29 13</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="social">
+  <a href="https://x.com/Zasssdem" target="_blank" rel="noopener noreferrer">𝕏 @Zasssdem</a>
+</div>
+
+<footer>
+  © 2026 Захар — студент БНТУ<br>
+  Сделано с ❤️
+</footer>
+
+</body>
+</html>
